@@ -26,3 +26,21 @@ class Solution:
             l2 = l2.next if l2 else None
 
         return dummy.next
+    
+# Create the linked lists
+l1 = ListNode(2)
+l1.next = ListNode(4)
+l1.next.next = ListNode(3)
+
+l2 = ListNode(5)
+l2.next = ListNode(6)
+l2.next.next = ListNode(4)
+
+# Pass the linked lists to the addTwoNumbers() method
+solution = Solution()
+result = solution.addTwoNumbers(l1, l2)
+
+# Print the result
+while result:
+    print(result.val)
+    result = result.next
