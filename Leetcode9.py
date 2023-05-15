@@ -2,7 +2,6 @@
 # Given an integer x, return true if x is a palindrome, and false otherwise.
 def extract_digits(number):
     extracted_digits = []
-    sign = "+"
     for i in str(number):
         extracted_digits.append(i)
     return extracted_digits
@@ -44,10 +43,19 @@ class Solution:
         b = 0
         while c:
             b = b * 10 + c % 10
-            print(b)
             c //= 10
-            print(c)
         return b == x
+    
+    def isPalindromeRevert(self, x: int) -> bool:
+        if x < 0 or (x % 10 == 0 and x != 0):
+            return False
+        
+        b = 0
+        while x > b:
+            b = b * 10 + x % 10
+            x //= 10
+
+        return x == b or x == b // 10
 
 solution = Solution()
 
@@ -74,3 +82,11 @@ print(solution.isPalindromeSimpler(123))
 print(solution.isPalindromeSimpler(121))
 print(solution.isPalindromeSimpler(-1))
 print(solution.isPalindromeSimpler(1))
+
+# revert tests
+print("\revert")
+
+print(solution.isPalindromeRevert(123))
+print(solution.isPalindromeRevert(121))
+print(solution.isPalindromeRevert(-1))
+print(solution.isPalindromeRevert(1))
