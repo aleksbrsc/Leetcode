@@ -1,3 +1,5 @@
+# Leetcode 2: Add Two Numbers (medium)
+
 # Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -27,7 +29,7 @@ class Solution:
 
         return dummy.next
     
-# Create the linked lists
+# creating the linked lists
 l1 = ListNode(2)
 l1.next = ListNode(4)
 l1.next.next = ListNode(3)
