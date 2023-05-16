@@ -39,8 +39,8 @@ class Solution:
     def isPalindromeSimpler(self, x: int) -> bool:
         if x < 0: return False
 
-        c = x
-        b = 0
+        c = x 
+        b = 0 # backwards number
         while c:
             b = b * 10 + c % 10
             c //= 10
@@ -84,7 +84,7 @@ print(solution.isPalindromeSimpler(-1))
 print(solution.isPalindromeSimpler(1))
 
 # revert tests
-print("\revert")
+print("\nrevert")
 
 print(solution.isPalindromeRevert(123))
 print(solution.isPalindromeRevert(121))

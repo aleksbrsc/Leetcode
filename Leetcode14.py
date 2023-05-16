@@ -17,6 +17,7 @@ class Solution:
                 return prefix # common prefix ends and is returned
         return prefix
     
+    # faster solution which sorts the list and comparing first string to last string
     def longestCommonPrefixFaster(self, strs: list[str]) -> str:
         prefix = ""
         strs = sorted(strs) # sort the strings lexicographically
