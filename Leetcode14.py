@@ -16,6 +16,17 @@ class Solution:
             if len(current) == len(strs): # if list is full but not every char is the same
                 return prefix # common prefix ends and is returned
         return prefix
+    
+    def longestCommonPrefixFaster(self, strs: list[str]) -> str:
+        prefix = ""
+        strs = sorted(strs) # sort the strings lexicographically
+        first = strs[0]
+        last = strs[-1]
+        for i in range(min(len(first), len(last))): # iterates through the characters of the first and last strings
+            if first[i] != last[i]:
+                return prefix
+            prefix += first[i]
+        return prefix
 
 # test cases
 test = ["flow","flower","flight"] 
@@ -25,3 +36,6 @@ solution = Solution()
 print(solution.longestCommonPrefix(test))
 print(solution.longestCommonPrefix(test2))
 print(solution.longestCommonPrefix(test3))
+print(solution.longestCommonPrefixFaster(test))
+print(solution.longestCommonPrefixFaster(test2))
+print(solution.longestCommonPrefixFaster(test3))
