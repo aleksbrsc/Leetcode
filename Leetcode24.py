@@ -1,4 +1,5 @@
 # Leetcode 24: Swap Nodes in Pairs (medium)
+# linked list
 
 # Definition for singly-linked list.
 class ListNode(object):

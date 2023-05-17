@@ -10,8 +10,13 @@ def extract_digits(number):
 class Solution:
     def isPalindrome(self, x: int) -> bool:
         digits = extract_digits(x)
-        reversed_digits = list(reversed(digits))
-
+        # below uses slice notation for reversing list, first : indicates inclusion of all elements in list,
+        # second : specifies step value which determines direction and size of the steps taken whiles slicing
+        # -1 as step value means the slice should iterate over the original list in reverse order
+        # because it takes steps of size -1, and its sign is negative so it moves from the end to the start 
+        reversed_digits = digits[::-1] 
+        # other ways to reverse a list:
+            # reversed_digits = list(reversed(digits))
 
         if digits == reversed_digits:
             return True
@@ -38,16 +43,19 @@ class Solution:
             div = div / 100
         return True
 
+    # simpler follow up solution
     def isPalindromeSimpler(self, x: int) -> bool:
         if x < 0: return False
 
         c = x 
         b = 0 # backwards number
         while c:
-            b = b * 10 + c % 10
-            c //= 10
+            b = b * 10 + c % 10 # appends rightmost digit after multiplying by 10 to add it to ten's place
+            c //= 10 # removes rightmost digit
         return b == x
     
+    # the half revert solution suggested by leetcode, 
+    # its basis is that you only need to look at half of the int
     def isPalindromeRevert(self, x: int) -> bool:
         if x < 0 or (x % 10 == 0 and x != 0):
             return False
@@ -58,6 +66,8 @@ class Solution:
             x //= 10
 
         return x == b or x == b // 10
+
+# test cases
 
 solution = Solution()
 

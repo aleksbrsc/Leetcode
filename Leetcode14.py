@@ -17,12 +17,14 @@ class Solution:
                 return prefix # common prefix ends and is returned
         return prefix
     
-    # faster solution which sorts the list and comparing first string to last string
+    # faster solution which sorts the strings, only comparing first string to last string meaning better time complexity () O(n)
     def longestCommonPrefixFaster(self, strs: list[str]) -> str:
         prefix = ""
-        strs = sorted(strs) # sort the strings lexicographically
-        first = strs[0]
-        last = strs[-1]
+        # sort the strings lexicographically
+        # because if there are any differences in the chars of string, the fastest way to spot them would be comparing only the first and last strings if they are sorted, and not iterating through every character of every word
+        strs = sorted(strs) 
+        first = strs[0] # first string in the list
+        last = strs[-1] # last string in the list
         for i in range(min(len(first), len(last))): # iterates through the characters of the first and last strings
             if first[i] != last[i]:
                 return prefix
