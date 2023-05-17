@@ -1,5 +1,6 @@
 # Leetcode 9: Palindrome (easy)
 # Given an integer x, return true if x is a palindrome, and false otherwise.
+
 def extract_digits(number):
     extracted_digits = []
     for i in str(number):
@@ -9,7 +10,8 @@ def extract_digits(number):
 class Solution:
     def isPalindrome(self, x: int) -> bool:
         digits = extract_digits(x)
-        reversed_digits = digits[::-1]
+        reversed_digits = list(reversed(digits))
+
 
         if digits == reversed_digits:
             return True
