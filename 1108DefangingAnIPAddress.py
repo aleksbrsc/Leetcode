@@ -1,4 +1,4 @@
-# Leetcode 1108: Defanging an IP Address (easy)
+# Leetcode 1108: Defanging an IP Address (easy, easiest)
 # string
 
 # given a valid IP address, return a defanged version of that IP address.
@@ -6,15 +6,15 @@
 
 class Solution:
     def defangIPaddr(self, address):
-        defanged = ""
+        defanged = "" # the new defanged string
 
-        for i, c in enumerate(address):
-            if c == ".":
-                defanged += "[.]"
-            else: defanged += c
+        for c in address: # for each character in the string
+            if c == ".": # if the character is a period
+                defanged += "[.]" # add this to defanged string instead
+            else: defanged += c # if the character isnt a period add the character to the defanged string
 
-        return defanged
-
-
+        return defanged # return the defanged version of the ip address
+    
+# test cases
 solution = Solution()
-print(solution.defangIPaddr("."))
+print(solution.defangIPaddr("1.1.1.1"))
