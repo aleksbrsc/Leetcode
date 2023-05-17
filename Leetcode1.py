@@ -1,6 +1,4 @@
 # Leetcode 1: TwoSum (easy)
-set = [2,7,11,15]
-target = 9
 
 # brute force solution
 class Solution:
@@ -24,7 +22,10 @@ class Solution:
             if diff in prevMap:
                 return [prevMap[diff], i]
             prevMap[n] = i
-        return
+        return ["None"]
+
+set = [2,7,11,15]
+target = 9
     
 solution = Solution
 print(solution.twoSumBruteNumbers(set, target))
