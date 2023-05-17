@@ -1,5 +1,5 @@
-# Leetcode 71: Generate Parentheses (medium)
-# stack
+# Leetcode 71: Simplify Path (medium)
+# stack, string
 
 class Solution():
     def simplifyPath(self, path: str) -> str:

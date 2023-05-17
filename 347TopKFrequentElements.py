@@ -1,5 +1,8 @@
 # Leetcode 347: Top K Frequent Elements
 # arrays, hashing
+
+# LEETCODE 347 TESTCASES NOT WORKING CORRECTLY, BUT THE EXACT TESTCASE WORKS HERE? see bottom
+
 from collections import defaultdict
 class Solution:
     def topKFrequent(self, nums: list[int], k: int) -> list[int]:
@@ -28,5 +31,5 @@ solution = Solution()
 
 leetcodetest = [4,1,-1,2,-1,2,3]
 
-print(solution.topKFrequent([2, 2, -2, 2, 1, 3, 4, 5, 3], 6))
+print(solution.topKFrequent([2, 2, 2, 2, 1, 3, 4, 5, 3], 3))
 print(solution.topKFrequent(leetcodetest, 2))
