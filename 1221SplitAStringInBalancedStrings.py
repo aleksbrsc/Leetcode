@@ -8,15 +8,19 @@ class Solution(object):
         :rtype: int
         """
         count = 0
-        max_count = 0 # maximum number of balanced strings you can obtain
+        max_count = 0 # maximum number of balanced substrings of s
 
         for c in s:
-            if c == "L": count += 1
-            if c == "R": count -= 1
-            if count == 0: max_count += 1 # if s is balanced, it will return to 0 a max count amount of times, where the max count is the amount of balanced substrings of s
-        
+            if c == "L":
+                count += 1
+            if c == "R":
+                count -= 1
+            # if count goes back to 0, this means a new substring was confirmed balanced and so the max count is incremented
+            if count == 0:
+                max_count += 1
+
         return max_count
     
 solution = Solution()
-print(solution.balancedStringSplit("RRL"))
+print(solution.balancedStringSplit("RRLLRLLR"))
  
