@@ -1,4 +1,4 @@
-# Leetcode 155: Min Stack
+# Leetcode 155: Min Stack (medium)
 # stacks
 # all functions must have a time complexity of O(1), meaning no sorting or iterating through list
 

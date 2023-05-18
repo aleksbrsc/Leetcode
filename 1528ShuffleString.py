@@ -25,7 +25,7 @@ class Solution(object):
 
         return shuffled # return the shuffled string
 
-    # simpler and faster solution without hashmap
+    # simpler and way faster solution without hashmap
     def restoreStringSimpler(self, s, indices):
         shuffled = ""
 
