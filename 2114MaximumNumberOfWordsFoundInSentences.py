@@ -10,9 +10,7 @@ class Solution(object):
         word_counts = []
 
         for s in sentences:
-            words = s.split() # 
-            print(words)
-            print(s)
+            words = s.split() # list of all the words in the sentence, split is based on whitespace between chars
             count = 0
             for word in words:
                 count += 1
