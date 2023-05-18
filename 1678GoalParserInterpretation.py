@@ -7,21 +7,27 @@ class Solution(object):
         :type command: str
         :rtype: str
         """
-        new = ""
+        new = "" # the new string to be returned
 
         for i, c in enumerate(command):
+            # G case
             if c == "G":
                 new += "G"
             if c == "(":
-                if i < len(command):
-                    if command[i+1] == ")":
+                # o case
+                if i < len(command): # to avoid out of range exception
+                    # if next character is a bracket
+                    if command[i+1] == ")": 
                         new += "o"
-                if i < len(command) - 3:
+                # al case
+                if i < len(command) - 3: # to avoid out of range exception 
+                    # if next 3 characters form "al)"
                     if command[i+1] == "a" and command[i+2] == "l" and command[i+3] == ")":
                         new += "al"
 
         return new
-    
+
+# test cases   
 solution = Solution()
 command = "G()()()()(al)"
 print(solution.interpret(command))
