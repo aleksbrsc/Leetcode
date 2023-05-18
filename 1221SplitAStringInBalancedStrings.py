@@ -21,6 +21,7 @@ class Solution(object):
 
         return max_count
     
+# test cases
 solution = Solution()
 print(solution.balancedStringSplit("RRLLRLLR"))
  
