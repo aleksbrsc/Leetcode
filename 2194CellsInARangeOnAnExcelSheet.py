@@ -31,9 +31,23 @@ class Solution(object):
                 cells_in_range.append(row_letter + str(column_number)) # add the cell string to the list of cells
 
         return cells_in_range
-                
+    
+    # popular one line leetcode solution
+    def cellsInRangeOneLine(self, s: str) -> list[str]:
+        return [chr(c) + chr(r) for c in range(ord(s[0]), ord(s[3]) + 1) for r in range(ord(s[1]), ord(s[4]) + 1)]
+
+    def cellsInRangeEasy(self, s):   
+        first_row = int(s[1])
+        last_row = int(s[4])
+        cells=[]
+       
+        for char in range(ord(s[0]), ord(s[3])+1):
+            for i in range(first_row, last_row + 1):
+                cells.append(chr(char)+str(i))
+        return cells
+
 # test cases
 solution = Solution()
-print(solution.cellsInRange("A2:E3"))
-print(solution.cellsInRange("A1:B2"))
-print(solution.cellsInRange("U7:X9"))
+print(solution.cellsInRangeEasy("A2:E3"))
+print(solution.cellsInRangeEasy("A1:B2"))
+print(solution.cellsInRangeEasy("U7:X9"))
