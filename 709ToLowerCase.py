@@ -1,12 +1,8 @@
-# Leetcode 709: To Lower Case (easy)
+# Leetcode 709: To Lower Case (easy, easiest)
 # string
 
 class Solution(object):
     def toLowerCase(self, s):
-        """
-        :type s: str
-        :rtype: str
-        """
         return s.lower()
     
 # test cases
