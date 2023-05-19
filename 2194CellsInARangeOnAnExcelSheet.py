@@ -2,6 +2,7 @@
 # string
 
 class Solution(object):
+    # mistake is that columns and rows are the other way around in excel
     def cellsInRange(self, s):
         """
         :type s: str
@@ -36,15 +37,25 @@ class Solution(object):
     def cellsInRangeOneLine(self, s: str) -> list[str]:
         return [chr(c) + chr(r) for c in range(ord(s[0]), ord(s[3]) + 1) for r in range(ord(s[1]), ord(s[4]) + 1)]
 
+    # easier, faster solution
+        # ord(character) gives ascii value of that character
+        # chr(ascii) converts ascii value back to character
+
+        # example:
+        # ord("a")=97
+        # chr(97)= a
+
+        # ord("A")=65
+        # chr(65)=A
     def cellsInRangeEasy(self, s):   
         first_row = int(s[1])
-        last_row = int(s[4])
-        cells=[]
+        last_row = int(s[4]) 
+        cells=[] # list of cells in a range
        
-        for char in range(ord(s[0]), ord(s[3])+1):
-            for i in range(first_row, last_row + 1):
-                cells.append(chr(char)+str(i))
-        return cells
+        for char in range(ord(s[0]), ord(s[3])+1): # for each column letter in the range
+            for i in range(first_row, last_row + 1): # for each row number in the range
+                cells.append(chr(char)+str(i)) # add the column and row to the cells list as a cell string
+        return cells # return the list of cell strings
 
 # test cases
 solution = Solution()
