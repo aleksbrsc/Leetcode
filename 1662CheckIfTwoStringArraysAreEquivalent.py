@@ -2,6 +2,7 @@
 # string
 
 class Solution(object):
+    # apparently beats 70% in both, but not much thought put into it at all
     def arrayStringsAreEqual(self, word1, word2):
         """
         :type word1: List[str]
@@ -18,7 +19,9 @@ class Solution(object):
         
         return joined_word1 == joined_word2
     
-    def arrayStringsAreEqual(self, word1: list[str], word2: list[str]) -> bool:
+    # one line solution
+    # The join() method takes all items in an iterable and joins them into one string. 
+    def arrayStringsAreEqualBetter(self, word1: list[str], word2: list[str]) -> bool:
         return ''.join(word1) == ''.join(word2)
 
 # test cases
@@ -26,5 +29,6 @@ solution = Solution()
 word1 = ["a", "cb"]
 word2 = ["ab", "c"]
 print(solution.arrayStringsAreEqual(word1, word2))
+print(solution.arrayStringsAreEqualBetter(word1, word2))
 
         
