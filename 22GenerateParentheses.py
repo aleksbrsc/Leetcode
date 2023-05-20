@@ -2,6 +2,7 @@
 # backtracking
 
 class Solution(object):
+    # neetcode solution
     def generateParenthesis(self, n):
         """
         :type n: int
