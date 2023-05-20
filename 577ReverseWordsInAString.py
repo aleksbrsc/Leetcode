@@ -26,4 +26,4 @@ class Solution(object):
 # test cases
 solution = Solution()
 print(solution.reverseWords("Let's take LeetCode contest"))
-print(solution.reverseWords2("God Ding"))
+print(solution.reverseWords("God Ding"))
