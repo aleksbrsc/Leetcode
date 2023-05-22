@@ -8,6 +8,7 @@ class Solution(object):
         :rtype: str
         """
         result = ""
+        
         for i, char in enumerate(s):
             if i % 2 != 0:
                 result += chr(ord(s[i - 1]) + int(s[i]))
@@ -15,12 +16,6 @@ class Solution(object):
                 result += char
         
         return result
-
-    def replaceDigits(self, s):
-        a = list(s)
-        for i in range(1, len(a), 2):
-            a[i] = chr(ord(a[i - 1]) + int(a[i]))
-        return ''.join(a)
 
 # test cases
 solution = Solution()

@@ -1,5 +1,5 @@
 # Leetcode 22: Generate Parentheses (medium)
-# backtracking
+# backtracking 
 
 class Solution(object):
     # neetcode solution
