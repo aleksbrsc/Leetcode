@@ -26,6 +26,7 @@ class Solution(object):
         return a_vowels == b_vowels
     
     # leetcode top python solution
+    # smarter approach with the middle, gets the count in one for loop only.
     def halvesAreAlike2(self, S: str) -> bool:
         vowels = "aeiouAEIOU" # interesting how we dont need a list if we're working with strings anyways
         mid, ans = len(S) // 2, 0
