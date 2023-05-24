@@ -9,8 +9,8 @@ class Solution(object):
         """
         count = 0
         
-        for tuple in zip(*strs): 
-            if list(tuple) != sorted(tuple): 
+        for t in zip(*strs): 
+            if list(t) != sorted(t): 
                 count += 1
                 
         return count
