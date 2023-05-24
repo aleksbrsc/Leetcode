@@ -2,6 +2,7 @@
 # hashmap
 
 class Solution:
+    # skip this
     # brute force solution that returns the numbers 
     def twoSumBruteNumbers(nums: list[int], target: int) -> list[int]:
         i = 0
