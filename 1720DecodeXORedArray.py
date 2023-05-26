@@ -15,8 +15,6 @@ class Solution(object):
 
         return arr
 
-        
-        
 # test cases
 solution = Solution()
 encoded = [1,2,3]
