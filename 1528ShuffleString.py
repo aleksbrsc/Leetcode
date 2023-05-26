@@ -1,5 +1,5 @@
 # Leetcode 1528: Shuffle String (easy)
-# string, hashmap
+# string, hashmap/array or something
 
 from collections import defaultdict
 class Solution(object):

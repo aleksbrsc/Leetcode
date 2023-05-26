@@ -1,5 +1,5 @@
-# Leetcode 2114: Maximum number of words found in setence (easy, easiest)
-# string
+# Leetcode 2114: Maximum number of words found in sentences (easy, easiest)
+# string, array
 
 class Solution(object):
     def mostWordsFound(self, sentences):
