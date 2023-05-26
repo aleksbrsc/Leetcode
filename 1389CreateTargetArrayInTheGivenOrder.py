@@ -16,6 +16,13 @@ class Solution(object):
             i += 1
         
         return target
+    
+    # top solution I found, pretty much same.
+    def createTargetArray(self, nums, index):
+        arr=[]
+        for n,i in zip(nums,index): 
+            arr.insert(i,n)
+        return arr
 
 # test cases
 solution = Solution()
