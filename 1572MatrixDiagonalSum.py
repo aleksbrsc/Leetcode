@@ -2,6 +2,7 @@
 # array
 
 class Solution(object):
+    # can rewrite this to be more condensed
     def diagonalSum(self, mat):
         """
         :type mat: List[List[int]]
@@ -24,14 +25,14 @@ solution = Solution()
 mat = [[1,2,3],
     [4,5,6],
     [7,8,9]]
-# print(solution.diagonalSum(mat)) # 25
+print(solution.diagonalSum(mat)) # 25
 mat = [[1,1,1,1],
     [1,1,1,1],
     [1,1,1,1],
     [1,1,1,1]]
-# print(solution.diagonalSum(mat)) # 8
+print(solution.diagonalSum(mat)) # 8
 mat = [[5]]
-# print(solution.diagonalSum(mat)) # 5
+print(solution.diagonalSum(mat)) # 5
 mat = [[7,3,1,9],
        [3,4,6,9],
        [6,9,6,6],
