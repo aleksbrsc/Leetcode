@@ -19,5 +19,5 @@ class Solution(object):
 # test cases
 solution = Solution()
 print(solution.sumOddLengthSubarrays([1,4,2,5,3])) # 58
-print(solution.sumOddLengthSubarrays([1,2])) # 3
-print(solution.sumOddLengthSubarrays([10,11,12])) # 66
+# print(solution.sumOddLengthSubarrays([1,2])) # 3
+# print(solution.sumOddLengthSubarrays([10,11,12])) # 66
