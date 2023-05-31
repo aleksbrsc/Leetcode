@@ -12,6 +12,7 @@ class Solution(object):
         i, j = 0, 0
         maxLocal = []
 
+        # scanning matrix columns belonging to one row, then moving onto next row
         while i < (n - 2):
             column_maxes = []
             while j < (n - 2):
