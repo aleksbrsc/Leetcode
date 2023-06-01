@@ -7,7 +7,7 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        nums = sorted(set(nums))
+        nums[:] = sorted(set(nums)) # [:] replaces the elements in place, 
         return len(nums)
 
 # test cases
