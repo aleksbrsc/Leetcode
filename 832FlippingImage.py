@@ -19,7 +19,6 @@ class Solution(object):
         
         return ans
 
-
 # test cases
 solution = Solution()
 image = [[1,1,0],[1,0,1],[0,0,0]]
