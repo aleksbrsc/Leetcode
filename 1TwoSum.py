@@ -4,7 +4,7 @@
 class Solution:
     # skip this
     # brute force solution that returns the numbers 
-    def twoSumBruteNumbers(nums: list[int], target: int) -> list[int]:
+    def twoSumBruteNumbers(self, nums: list[int], target: int) -> list[int]:
         i = 0
         for x in nums:
             for y in nums:
@@ -16,7 +16,7 @@ class Solution:
         return ["None"]
     
     # correct way using hashmap which returns the indices
-    def twoSum(nums: list[int], target: int) -> list[int]:
+    def twoSum(self, nums: list[int], target: int) -> list[int]:
         prevMap = {} # maps val : index for each previous element
         # i is the index
         # n is the value
@@ -28,7 +28,7 @@ class Solution:
         return ["None"]
 
 # test cases
-solution = Solution
+solution = Solution()
 set = [2,7,11,15]
 target = 9
 print(solution.twoSumBruteNumbers(set, target))
