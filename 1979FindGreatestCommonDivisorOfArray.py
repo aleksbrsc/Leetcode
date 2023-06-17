@@ -1,6 +1,9 @@
 # Leetcode  1979. Find Greatest Common Divisor of Array (easy)
 # array
 
+# Greatest common divisor will always apply to the min and max of nums
+# Check every index from **min** down to **0**
+# if the index divides each of the integers evenly then it will be the greatest common divisor
 class Solution(object):
     def findGCD(self, nums):
         """
