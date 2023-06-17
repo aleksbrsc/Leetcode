@@ -15,7 +15,7 @@ class Solution(object):
             distinct_prefix_elements, distinct_suffix_elements = 0, 0 # the count of distinct prefix/suffix elements
             
             # determining the number of distinct prefixes
-            for p in range(0, i + 1):
+            for p in range(i + 1):
                 if nums[p] not in distinct_prefixes: distinct_prefixes.append(nums[p])
             distinct_prefix_elements = len(distinct_prefixes)
             
