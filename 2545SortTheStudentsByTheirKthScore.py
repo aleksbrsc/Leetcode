@@ -22,7 +22,10 @@ class Solution(object):
                     ans.append(i)
         
         return ans
-                
+
+    # faster one line solution, worse SC       
+    def sortTheStudents(self, score, k):
+        return sorted(score, key=lambda a: -a[k])
         
 # test cases
 solution = Solution()
