@@ -2,31 +2,15 @@
 # array, string
 
 class Solution(object):
-    # def digitCount(self, num):
-    #     """
-    #     :type num: str
-    #     :rtype: bool
-    #     """
-    #     for i in range(len(num)):
-    #         if int(num[i]) != num.count(str(i)): return False
-        
-    #     return True
-
     def digitCount(self, num):
-        countMap = {} # map val: count
-
-        for n in num:
-            if n not in countMap:
-                countMap[n] = 1
-            else: countMap[n] += 1
+        """
+        :type num: str
+        :rtype: bool
+        """
+        for i in range(len(num)):
+            if int(num[i]) != num.count(str(i)): return False
         
-        print(num)
-        print(countMap)
-        # print("")
-
-        for i, n in enumerate(num):
-            print(i, n, countMap[n])
-            
+        return True
 
 # test cases
 solution = Solution()
