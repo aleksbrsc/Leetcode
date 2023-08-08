@@ -9,9 +9,8 @@ class Solution(object):
         """
         # letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
         #             "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-                    
+        
         letters = "abcdefghijklmnopqrstuvwxyz"
-    
         counts = []
 
         for string in strs:
@@ -25,7 +24,6 @@ class Solution(object):
             counts.append(int(string))
 
         return max(counts)
-
             
 # test cases
 solution = Solution()
