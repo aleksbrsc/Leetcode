@@ -7,13 +7,14 @@ class Solution(object):
         :type strs: List[str]
         :rtype: int
         """
-        digits = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
-        letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
-                    "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+        # letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
+        #             "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+                    
+        letters = "abcdefghijklmnopqrstuvwxyz"
+    
         counts = []
 
         for string in strs:
-            count = 0
             contains_letters = False
             for char in string:
                 if char in letters:
@@ -22,10 +23,6 @@ class Solution(object):
                 counts.append(len(string))
                 continue
             counts.append(int(string))
-
-
-                    
-
 
         return max(counts)
 
