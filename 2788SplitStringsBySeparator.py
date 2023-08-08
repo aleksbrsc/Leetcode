@@ -22,7 +22,6 @@ class Solution(object):
             if string == "": continue
             refined.append(string)
             
-
         return refined
 
 
