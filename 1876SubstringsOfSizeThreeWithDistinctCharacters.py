@@ -15,9 +15,6 @@ class Solution(object):
         
         return count
 
-
-        
-
 # test cases
 solution = Solution()
 s = "xyzzaz"
