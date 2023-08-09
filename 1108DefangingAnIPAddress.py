@@ -14,28 +14,7 @@ class Solution:
             else: defanged += c # if the character isnt a period add the character to the defanged string
 
         return defanged # return the defanged version of the ip address
-    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
 # test cases
 solution = Solution()
 print(solution.defangIPaddr("1.1.1.1"))
