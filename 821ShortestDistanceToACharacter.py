@@ -26,9 +26,6 @@ class Solution(object):
             ans.append(closest)
             
         return ans
-            
-
-
 
 # test cases
 solution = Solution()
