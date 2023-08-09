@@ -14,6 +14,7 @@ class Solution(object):
         #         for rest in range(len())
         return False
 
+    # faster, without casting and sorted
     def checkString(self, s):
         flag = False
 
@@ -22,7 +23,6 @@ class Solution(object):
             if char == "b": flag = True
 
         return True
-
 
 # test cases
 solution = Solution()
