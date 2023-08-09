@@ -18,7 +18,6 @@ class Solution(object):
         :rtype: bool
         """
         letters = set(s)
-        print(letters)
         
         # mapping letters to distances
         for i, letter in enumerate(s):
@@ -26,13 +25,9 @@ class Solution(object):
                 for j in range(i + 1, len(s)):
                     if s[j] == letter:
                         if distance[ord(letter) - 97] != abs(i - j) - 1: return False
-
-                        # if abs(i - j) != distance[ord(letter) - 97]: return False
             letters.discard(letter)
 
         return True
-
-
 
 # test cases
 solution = Solution()
