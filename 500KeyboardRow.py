@@ -4,14 +4,17 @@
 class Solution(object):
     def findWords(self, words):
         ans = []
+        q = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p']
+        a = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l']
+        z = ['z', 'x', 'c', 'v', 'b', 'n', 'm']
 
         for word in words:
-            word = word.lower()
+            lower_word = word.lower()
             broken = False
-            belonging = "qwertyuiop"
-            if word[0] in any("asdfghjkl"): belonging = "asdfghjkl"
-            if word[0] in "zxcvbnm": belonging = "zxcvbnm"
-            for letter in words:
+            belonging = q
+            if lower_word[0] in a: belonging = a
+            if lower_word[0] in z: belonging = z
+            for letter in lower_word:
                 if letter not in belonging: broken = True 
             if broken == False: ans.append(word)
 
