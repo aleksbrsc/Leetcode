@@ -1,7 +1,8 @@
 # Leetcode 1047. Remove All Adjacent Duplicates In String (easy)
-# string
+# string, stack
 
 class Solution(object):
+    # faster using stack
     def removeDuplicates(self, s):
         stack, ans = [], ""
 
@@ -15,6 +16,7 @@ class Solution(object):
         
         return ans
 
+    # works, but doesn't pass time limit (needs stack)
     def removeDuplicates2(self, s):
         """
         :type s: str
