@@ -17,9 +17,6 @@ class Solution(object):
         
         return len(used) // 2
 
-
-        
-
 # test cases
 solution = Solution()
 words = ["cd","ac","dc","ca","zz"]

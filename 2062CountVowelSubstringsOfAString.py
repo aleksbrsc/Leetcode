@@ -21,7 +21,6 @@ class Solution(object):
         substrings = []
         ans = 0
         vowels = ["a", "e", "i", "o", "u"]
-        # vowels = "aeiou"
 
         i = 0
         while i < len(word) -5:
@@ -39,11 +38,7 @@ class Solution(object):
                         ans += 1
             i += 1
 
-        
-        return ans, substrings
-                
-
-        
+        return ans
 
 # test cases
 solution = Solution()

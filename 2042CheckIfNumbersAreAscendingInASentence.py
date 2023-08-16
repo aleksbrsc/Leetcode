@@ -11,8 +11,10 @@ class Solution(object):
         tokens = s.split(" ")
 
         for token in tokens:
-            try: numbers.append(int(token))
-            except: pass
+            if token.isdigit():
+                numbers.append(int(token)) 
+            # try: numbers.append(int(token))
+            # except: pass
 
         s = 0
         for num in numbers:
@@ -20,8 +22,6 @@ class Solution(object):
             s = num
 
         return True
-
-        
 
 # test cases
 solution = Solution()
