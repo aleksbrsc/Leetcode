@@ -2,7 +2,7 @@
 # string 
 
 class Solution(object):
-    def lengthOfLongestSubstring(self, s):
+    def lengthOfLongestSubstring2(self, s):
         """
         :type s: str
         :rtype: int
@@ -23,7 +23,6 @@ class Solution(object):
         substrings.append(len(substring))
 
         return max(substrings)
-
 
 # test cases
 solution = Solution()

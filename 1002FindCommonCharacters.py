@@ -2,30 +2,30 @@
 # string, array
 
 class Solution(object):
+    # inefficient first solution
     def commonChars(self, words):
         """
         :type words: List[str]
         :rtype: List[str]
         """
-        common = []
+        common, sorted_words  = [], []
 
-        # Count the frequency of characters in the first word
-        char_count = {}
-        for char in words[0]:
-            char_count[char] = char_count.get(char, 0) + 1
+        for word in words:
+            sorted_words.append(sorted(word))
 
-        # Iterate through the rest of the words and update char_count
-        for word in words[1:]:
-            temp_count = {}
-            for char in word:
-                if char in char_count and char_count[char] > 0:
-                    temp_count[char] = temp_count.get(char, 0) + 1
-                    char_count[char] -= 1
-            char_count = temp_count
+        smallest = min(sorted_words)
+        n = len(sorted_words)
 
-        # Build the common characters list based on char_count
-        for char, count in char_count.items():
-            common.extend([char] * count)
+        for letter in smallest:
+            count = 0
+            temp_sorted_words = [list(word) for word in sorted_words]  # Create copies
+            for i in range(n):
+                if letter in temp_sorted_words[i]:
+                    count += 1
+            if count == n:
+                common.append(letter)
+                for word in temp_sorted_words:
+                    word.remove(letter)
 
         return common
 
