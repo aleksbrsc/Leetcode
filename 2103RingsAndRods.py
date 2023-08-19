@@ -21,8 +21,6 @@ class Solution(object):
             if "R" in rods_map[rod] and "G" in rods_map[rod] and "B" in rods_map[rod]: ans += 1
 
         return ans
-
-        
         
 # test cases
 solution = Solution()
@@ -31,4 +29,4 @@ print(solution.countPoints(rings)) # 1
 rings = "B0R0G0R9R0B0G0"
 print(solution.countPoints(rings)) # 1
 rings = "G4"
-print(solution.countPoints(rings)) # 
+print(solution.countPoints(rings)) # 0

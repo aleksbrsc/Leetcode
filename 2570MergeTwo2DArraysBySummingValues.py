@@ -2,7 +2,7 @@
 # hashmap, array
 
 class Solution(object):
-    # O(n)
+    # O(n) beats 80%
     def mergeArrays(self, nums1, nums2):
         """
         :type nums1: List[List[int]]
