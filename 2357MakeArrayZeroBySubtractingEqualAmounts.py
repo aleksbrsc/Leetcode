@@ -2,7 +2,12 @@
 # array, hashmap
 
 class Solution(object):
+    # fastest approach
     def minimumOperations(self, nums):
+        return len(set(nums) - {0})
+    
+    # slow first approach
+    def minimumOperations2(self, nums):
         """
         :type nums: List[int]
         :rtype: int
@@ -11,11 +16,8 @@ class Solution(object):
         while True:
             lowest = max(nums)
             for n in nums:
-
                 if n > 0 and n < lowest:
                     lowest = n
-
-
 
             if lowest == 0: return ans
 

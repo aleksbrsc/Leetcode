@@ -1,4 +1,5 @@
 # Leetcode 2154. Keep Multiplying Found Values by Two
+# array, set
 
 class Solution(object):
     # should be faster, set has O(1) lookup time because sets are implemented as hash tables, means membership testing is faster.
