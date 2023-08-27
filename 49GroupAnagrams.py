@@ -3,7 +3,51 @@
 
 from collections import defaultdict
 class Solution(object):
-    def groupAnagrams(self, strs: list[str]) -> list[list[str]]:
+    # redoing it without sorting, faster, without defaultdict
+    def groupAnagrams3(self, strs):
+        anagram_map = {} # count : list of anagrams for that count
+        ans = []
+
+        for string in strs:
+            count = [0] * 26
+
+            for char in string:
+                ascii = ord(char) - 97
+                count[ascii] += 1
+
+            count = tuple(count)
+            if count in anagram_map:
+                anagram_map[count].append(string)
+            else:
+                anagram_map[count] = [string]
+        # return anagram_map.values()     <- worse tc and sc on leetcode?
+        for count in anagram_map: 
+            ans.append(anagram_map[count])
+        
+        return ans
+
+    def groupAnagrams(self, strs):
+        anagram_map = defaultdict(list) # count : list of anagrams for that count
+        ans = []
+
+        for string in strs:
+            count = [0] * 26
+
+            for char in string:
+                ascii = ord(char) - 97
+                count[ascii] += 1
+
+            count = tuple(count)
+            anagram_map[count].append(string)
+            
+        # return anagram_map.values()     <- worse tc and sc on leetcode?
+        for count in anagram_map: 
+            ans.append(anagram_map[count])
+        
+        return ans
+
+    # old first solution
+    def groupAnagrams2(self, strs: list[str]) -> list[list[str]]:
         # defaultdict never raises a KeyError as it provides a default value for the key that does not exist
         # this is useful when we are storing collections inside hashmaps, default hashmap needs them to be initialized 
         # but in defaultdict they are already initialized by default, which is convenient
