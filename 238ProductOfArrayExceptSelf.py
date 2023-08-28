@@ -1,10 +1,10 @@
-# Leetcode 238. Product of Array Except Self (easy)
+# Leetcode 238. Product of Array Except Self (medium)
 # array
 
 class Solution(object):
     def productExceptSelf(self, nums):
         ans = [1] * len(nums) 
-        
+
         prefix, postfix = 1, 1
         for i in range(len(nums)):
             ans[i] = prefix

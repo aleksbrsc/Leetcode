@@ -1,4 +1,4 @@
-# Leetcode 347: Top K Frequent Elements
+# Leetcode 347: Top K Frequent Elements (medium)
 # arrays, hashing
 
 
@@ -31,6 +31,7 @@ class Solution:
         
         return ans
 
+# test cases
 solution = Solution()
 nums = [1,1,1,2,2,3]
 k = 2
