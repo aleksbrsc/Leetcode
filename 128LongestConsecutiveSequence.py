@@ -2,7 +2,26 @@
 # arrays, sorting
 
 class Solution:
+    # faster revisit O(n) but forgor no reason for base case if i set highest to 0, or maybe good?
     def longestConsecutive(self, nums: list[int]) -> int:
+        if nums == []: return 0
+
+        nums = set(nums)
+        highest = 1
+
+        for n in nums:
+            if n - 1 in nums:
+                continue
+            count = 1
+            i = n
+            while i + 1 in nums:
+                count += 1
+                i += 1
+            if count > highest: highest = count
+        
+        return highest
+
+    def longestConsecutiv3e(self, nums: list[int]) -> int:
         if nums == []:
             return 0
         
@@ -26,7 +45,6 @@ class Solution:
         sorted_counts = sorted(counts, reverse=True)
 
         return sorted_counts[0] # return the highest count, this will be the longest consecutive sequence
-
 
 solution = Solution()
 print(solution.longestConsecutive([1, 2, 0, 1]))
