@@ -2,9 +2,23 @@
 # arrays, hashing
 
 
-# from collections import defaultdict
+from collections import defaultdict
 class Solution:
+    # defaultdict revisited, fastest
     def topKFrequent(self, nums, k):
+        freq, ans = defaultdict(int), []
+        for n in nums:
+            freq[n] += 1
+        
+        sorted_freq = sorted(freq.items(), key=lambda x:x[1], reverse=True)
+
+        for i in range(k):
+            ans.append(sorted_freq[i][0])
+        
+        return ans
+    
+    # revisited
+    def topKFrequent2(self, nums, k):
         freq, ans = {}, []
         for n in nums:
             if n in freq: freq[n] += 1
@@ -23,9 +37,9 @@ k = 2
 print(solution.topKFrequent(nums, k)) # [1,2]
 print(solution.topKFrequent([1], 1)) # [1]
 
-
+# old
 # LEETCODE 347 TESTCASES NOT WORKING CORRECTLY, BUT THE EXACT TESTCASE WORKS HERE? see bottom
-    # def topKFrequent2(self, nums: list[int], k: int) -> list[int]:
+    # def topKFrequent(self, nums: list[int], k: int) -> list[int]:
     #     count_map = defaultdict(list) # number : count
     #     result = []
 
