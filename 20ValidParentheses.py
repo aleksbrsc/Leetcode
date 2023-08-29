@@ -1,7 +1,27 @@
 # Leetcoded 20: Valid Parentheses (easy)
 # stack
 
-class Solution:
+class Solution(object):
+    # revisit, faster submission?
+    def isValid(self, s):
+        stack = []
+        closed_to_open = {
+            "}" : "{",
+            "]" : "[",
+            ")" : "("
+        }
+
+        for bracket in s:
+            if bracket not in closed_to_open:
+                stack.append(bracket)
+            else:
+                if stack and closed_to_open[bracket] == stack[-1]:
+                    stack.pop()
+                else:
+                    return False
+
+        return stack == []
+    
     def isValid(self, s: str) -> bool:
         stack = []
         # hashmap mapping closed brackets to their corresp. open bracket 
