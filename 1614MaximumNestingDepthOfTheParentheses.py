@@ -21,7 +21,6 @@ class Solution(object):
         
         return ans
 
-
 # test cases
 solution = Solution()
 s = "(1+(2*3)+((8)/4))+1" 
