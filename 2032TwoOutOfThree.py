@@ -22,7 +22,7 @@ class Solution(object):
         
         return ans
 
-    # top sol, rmr intersection from set theory
+    # top sol, remember intersection from set theory
     def twoOutOfThree(self, nums1, nums2, nums3):
         ret = []
 
