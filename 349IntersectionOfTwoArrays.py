@@ -2,6 +2,7 @@
 # array, hashmap
 
 class Solution(object):
+    # 80% tc
     def intersection(self, nums1, nums2):
         """
         :type nums1: List[int]
