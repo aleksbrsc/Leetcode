@@ -1,6 +1,7 @@
 # 2363. Merge Similar Items (easy)
 # 2d array
 
+from collections import defaultdict
 class Solution(object):
     def mergeSimilarItems(self, items1, items2):
         """
@@ -8,6 +9,17 @@ class Solution(object):
         :type items2: List[List[int]]
         :rtype: List[List[int]]
         """
+        ans = []
+        value_to_weights = defaultdict(int)
+
+        for item in items1:
+            value_to_weights[item[0]] += item[1]
+        for item in items2:
+            value_to_weights[item[0]] += item[1]
+        
+        return sorted(value_to_weights.items())
+        return sorted(value_to_weights.items(), key=lambda x:x[1], reverse=True)
+
 
 # test cases
 solution = Solution()
