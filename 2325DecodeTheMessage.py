@@ -1,5 +1,5 @@
 # Leetcode 2325: Decode the Message (easy)
-# sting
+# string, hashmap
 
 class Solution(object):
     def decodeMessage(self, key, message):

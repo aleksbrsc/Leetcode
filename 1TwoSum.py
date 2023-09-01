@@ -15,7 +15,7 @@ class Solution:
     #     return ["None"]
     
     # correct way using hashmap which returns the indices
-    def twoSum(self, nums: list[int], target: int) -> list[int]:
+    def twoS32um(self, nums: list[int], target: int) -> list[int]:
         prevMap = {} # maps val : index for each previous element
         # i is the index
         # n is the value
@@ -30,4 +30,4 @@ class Solution:
 solution = Solution()
 set = [2,7,11,15]
 target = 9
-print(solution.twoSum(set, target))
+print(solution.twoSum(set, target)) # [0, 7]

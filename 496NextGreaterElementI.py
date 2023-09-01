@@ -1,5 +1,5 @@
 # Leetcode 496. Next Greater Element I (easy)
-# array, 
+# array
 
 class Solution(object):
     def nextGreaterElement(self, nums1, nums2):

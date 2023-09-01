@@ -1,33 +1,40 @@
 # Leetcode 13: Roman to Integer (easy)
-# hashmap
+# hashmap, string
+
+# convert the given roman numeral string into an integer value
+#   (the idea is, if a numeral is lesser than the next numeral, 
+#   subtract the lesser numeral from the total. Otherwise, add regularly)
+#
+#   e.g.  IX = 0 - 1 + 10 = 9
+#   e.g.  IV = 0 - 1 + 5 = 4
+#   e.g.  CXXI = 0 + 100 + 10 + 10 + 1
+#   e.g.  MCMXIV = 0 + 1000 - 100 + 1000 + 10 - 1 + 5 = 1914
+# 
 
 class Solution:
     def romanToInt(self, s: str) -> int:
+        ans = 0
         # hashmap mapping each roman numeral to its integer value
         romans = {  "I" : 1,
-                    "V" : 5, 
-                    "X" : 10, 
-                    "L" : 50, 
-                    "C" : 100, 
-                    "D" : 500, 
-                    "M" : 1000 }
-        
-        result = 0
+                    "V" : 5,
+                    "X" : 10,
+                    "L" : 50,
+                    "C" : 100,
+                    "D" : 500,
+                    "M" : 1000, }
 
-        for i in range(len(s)): # iterate length
-            # first checks if there is a numeral after it to avoid string index out of range error
-            # then checks if a greater numeral comes after a smaller numeral,
-            # in which case the rule is that we subtract our result by the smaller number
+        for i in range(len(s)):
+            # checks if next numeral exists to avoid indexing out of range error
+            # and checks if the numeral is lesser than the next,
             if i + 1 < len(s) and romans[s[i]] < romans[s[i + 1]]:
-                result -= romans[s[i]] # subtract if smaller number
-            else:
-                result += romans[s[i]] # add if greater number
+                ans -= romans[s[i]] # if it is, subtract
+            else: ans += romans[s[i]] # if it is not, add
 
-        return result
+        return ans  
         
 # test cases
 solution = Solution()
-print(solution.romanToInt("IX"))
-print(solution.romanToInt("IV"))
-print(solution.romanToInt("CXXI"))
-print(solution.romanToInt("MCMXIV"))
+print(solution.romanToInt("IX")) # 9
+print(solution.romanToInt("IV")) # 4
+print(solution.romanToInt("CXXI")) # 121
+print(solution.romanToInt("MCMXIV")) # 1914

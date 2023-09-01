@@ -1,5 +1,5 @@
 # 2363. Merge Similar Items (easy)
-# 2d array
+# 2d array, hashmap
 
 from collections import defaultdict
 class Solution(object):
@@ -9,7 +9,6 @@ class Solution(object):
         :type items2: List[List[int]]
         :rtype: List[List[int]]
         """
-        ans = []
         value_to_weights = defaultdict(int)
 
         for item in items1:
@@ -18,8 +17,6 @@ class Solution(object):
             value_to_weights[item[0]] += item[1]
         
         return sorted(value_to_weights.items())
-        return sorted(value_to_weights.items(), key=lambda x:x[1], reverse=True)
-
 
 # test cases
 solution = Solution()

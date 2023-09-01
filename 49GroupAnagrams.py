@@ -1,10 +1,31 @@
 # Leetcode 49: Group Anagrams (medium)
-# stack
+# array, bubble sort, hashmap / defaultdict
 
 from collections import defaultdict
 class Solution(object):
-    # redoing it without sorting, faster, without defaultdict
-    def groupAnagrams3(self, strs):
+    # fastest without sorting, using defaultdict
+    def groupAnagrams(self, strs):
+        anagram_map = defaultdict(list) # count : list of anagrams for that count
+        ans = []
+
+        for string in strs:
+            count = [0] * 26
+
+            for char in string:
+                ascii = ord(char) - 97
+                count[ascii] += 1
+
+            count = tuple(count)
+            anagram_map[count].append(string)
+            
+        # return anagram_map.values()     <- worse tc and sc on leetcode?
+        for count in anagram_map: 
+            ans.append(anagram_map[count])
+        
+        return ans
+
+    # redoing it without sorting and defaultdict
+    def groupAnagrams(self, strs):
         anagram_map = {} # count : list of anagrams for that count
         ans = []
 
@@ -20,26 +41,6 @@ class Solution(object):
                 anagram_map[count].append(string)
             else:
                 anagram_map[count] = [string]
-        # return anagram_map.values()     <- worse tc and sc on leetcode?
-        for count in anagram_map: 
-            ans.append(anagram_map[count])
-        
-        return ans
-
-    def groupAnagrams(self, strs):
-        anagram_map = defaultdict(list) # count : list of anagrams for that count
-        ans = []
-
-        for string in strs:
-            count = [0] * 26
-
-            for char in string:
-                ascii = ord(char) - 97
-                count[ascii] += 1
-
-            count = tuple(count)
-            anagram_map[count].append(string)
-            
         # return anagram_map.values()     <- worse tc and sc on leetcode?
         for count in anagram_map: 
             ans.append(anagram_map[count])
