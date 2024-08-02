@@ -2,6 +2,14 @@
 # stacks
 # all functions must have a time complexity of O(1), meaning no sorting or iterating through list
 
+# MinStack() initializes the stack object.
+# void push(int val) pushes the element val onto the stack.
+# void pop() removes the element on the top of the stack.
+# int top() gets the top element of the stack.
+# int getMin() retrieves the minimum element in the stack.
+# You must implement a solution with O(1) time complexity for each function.
+
+
 class MinStack:
     
     def __init__(self):
